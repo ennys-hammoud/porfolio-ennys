@@ -30,6 +30,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-right: 140px;
 }
 
 nav ul li a {
@@ -70,7 +71,7 @@ nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
 }
 
@@ -88,6 +89,7 @@ nav ul li a {
     width: 400px;
     border-radius: 50%;
     filter: brightness(0.8);
+    margin-right: 110px;
 }
 
 /* TIMELINE SECTION */
@@ -229,4 +231,72 @@ button:hover{
 .hero h1 span {
     color: #00f7ff; /* Maintient la couleur */
     text-shadow: 0 0 15px #00f7ff; /* Effet lumineux autour de 'Ennys' */
+}
+h2{
+    color: #B42CCA;
+    text-shadow: 0 0 10px #B42CCA;
+}
+
+/* Footer */
+footer {
+    background-color: #111; /* Couleur de fond sombre */
+    color: #fff; /* Texte blanc */
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 247, 255, 0.2); /* Ombre lumineuse en haut */
+    border-top: 2px solid #00f7ff; /* Ligne lumineuse en haut */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #00f7ff;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff; /* Change la couleur au survol */
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 30px; /* Ajustez la taille des icônes */
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2); /* Agrandit légèrement l'icône au survol */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #fff; /* Texte plus discret */
 }
