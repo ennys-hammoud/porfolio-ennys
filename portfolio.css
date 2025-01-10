@@ -50,8 +50,11 @@ nav ul li a {
     max-width: 50%;
 }
 
+
+
 .hero h1, .hero h2 {
     margin: 0;
+    text-align: left;
 }
 
 .hero h1 span, .hero h2 span {
@@ -130,6 +133,7 @@ section h2 {
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
 }
+
 
 .timeline-content h3 {
     color: #00f7ff;
@@ -215,7 +219,7 @@ button {
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
-    transition: background 0.3s;
+    
 }
 
 button:hover{
@@ -225,7 +229,7 @@ button:hover{
 .hero h1 {
     font-size: 4rem; /* Augmente la taille du texte */
     margin-bottom: 20px; /* Espace en dessous du titre */
-    text-align: center; /* Centre le texte si nécessaire */
+    text-align: left; /* Centre le texte si nécessaire */
 }
 
 .hero h1 span {
@@ -329,7 +333,7 @@ footer {
 .skill h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: #00f7ff;
 }
 
 .skill-bar {
@@ -347,6 +351,7 @@ footer {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
     transition: width 0.5s ease-in-out;
+    background: linear-gradient(to right, #00f7ff, #00ccff);
 }
 
 /* ABOUT ME SECTION */
@@ -428,6 +433,56 @@ body, html {
 }
 
 .skill-level {
-    background: linear-gradient(to right, #00f7ff, #00ccff);
+    background: linear-gradient(to right, #00f7ff, #00f7ff);
+}
+
+
+/* Effet de survol pour les cartes */
+.timeline-content,
+.about-container,
+.skill {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover,
+.about-container:hover,
+.skill:hover {
+    transform: translateY(-10px); /* Légèrement soulevé */
+    box-shadow: 0 8px 20px rgba(0, 247, 255, 0.7); /* Ombre plus marquée */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #00f7ff; /* Couleur par défaut */
+    transition: color 0.3s ease; /* Transition fluide */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Change en blanc au survol */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block; /* S'assure qu'ils ont une taille fixe */
+    width: 200px; /* Fixe une largeur uniforme pour les deux boutons */
+    text-align: center; /* Centrer le texte */
+}
+
+.hire, .contact {
+    width: 200px; /* Ajoute la même largeur pour les deux boutons */
+}
+
+.hire {
+    background-color: #00f7ff;
+    color: #000;
+}
+
+.contact {
+    border: 2px solid #00f7ff;
+    color: #00f7ff;
 }
 
