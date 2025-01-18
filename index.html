@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permet l'adaptation aux écrans de différentes tailles -->
     <meta name="description" content="Portfolio of Ennys Hammoud, a Web and Mobile Development Student Passionate About Creating Modern and Interactive Websites">
     <meta name="keywords" content="Ennys Hammoud, portfolio, web developer, HTML, CSS, JavaScript, learning, La Plateforme_">
+    <meta name="author" content="Ennys Hammoud">
     <title>Portfolio - Ennys Hammoud</title> <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
     <link rel="stylesheet" href="portfolio.css"><!-- Lien vers le fichier CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Importation de la police Poppins -->
@@ -13,23 +14,21 @@
 <body>
     <!-- HEADER -->
     <header>
-        <div class="logo">Ennys <span>Hammoud</span></div> <!-- Logo du portfolio -->
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+        <div class="logo">Ennys <span>Hammoud</span></div>
     <nav>
-            <ul>
-                <!-- Menu de navigation permettant de naviguer entre les sections -->
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experiences">Experiences</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">My Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu"> <!-- Ajoutez la classe nav-menu ici -->
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     </header>
 
     <!-- HERO SECTION -->
@@ -206,5 +205,19 @@
             <p>&copy; 2025 Ennys Hammoud | All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Reste du contenu de la page -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            console.log('Menu toggled'); // Pour le débogage
+        });
+    });
+</script>
 </body>
 </html>
