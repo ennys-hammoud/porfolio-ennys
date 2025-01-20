@@ -108,18 +108,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 247, 255, 0.5); /* Ombre */
 }
 
-/* Optionnel : responsive */
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column; /* Boutons empilés */
-        align-items: center; /* Centrage horizontal */
-    }
 
-    .btn {
-        width: 100%; /* Largeur pleine pour mobile */
-        text-align: center;
-    }
-}
 .hire, .contact {
     width: 200px; /* Ajoute la même largeur pour les deux boutons */
     margin-top: 10px;
@@ -162,6 +151,34 @@ nav ul li a:hover {
     filter: brightness(0.8);
     margin-right: 90px;
 }
+
+/* ABOUT ME SECTION */
+#about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #B42CCA;
+    margin-bottom: 30px;
+}
+
+.about-container {
+    background-color: #111;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-container p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
 
 /* TIMELINE SECTION */
 section h2 {
@@ -257,9 +274,32 @@ form{
     font-size: 1rem;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #999;
+/* Style pour le bouton d'envoi */
+.form-group .btn-submit {
+    width: 100%; /* Même largeur que les autres champs */
+    padding: 10px; /* Même espace intérieur */
+    font-size: 16px; /* Texte uniforme */
+    color: #000;
+    background-color: #00f7ff; /* Couleur bleue */
+    border: 1px solid #ccc; /* Même type de bordure */
+    border-radius: 5px; /* Coins arrondis identiques */
+    cursor: pointer;
+    text-transform: uppercase; /* Texte en majuscules */
+    box-sizing: border-box; /* Gère bien le padding et la bordure */
+    transition: background-color 0.3s ease; /* Animation pour un effet doux */
+}
+
+/* Effet au survol */
+.form-group .btn-submit:hover {
+    background-color: #00f7ff; /* Change uniquement la couleur de fond */
+}
+
+/* Pour garantir la même taille */
+.form-group input, 
+.form-group textarea, 
+.form-group .btn-submit {
+    display: block; /* S'assure qu'ils occupent toute la largeur */
+    box-sizing: border-box; /* Empêche les variations de taille */
 }
 
 
@@ -287,7 +327,7 @@ h2{
 
 #skills h2 {
     font-size: 2.5rem;
-    color: #00f7ff;
+    color: #B42CCA;
     margin-bottom: 30px;
 }
 
@@ -328,67 +368,11 @@ h2{
     background: linear-gradient(to right, #00f7ff, #00ccff);
 }
 
-/* ABOUT ME SECTION */
-#about {
-    padding: 50px 20px;
-    text-align: center;
-}
 
-#about h2 {
-    font-size: 2.5rem;
-    color: #00f7ff;
-    margin-bottom: 30px;
-}
-
-.about-container {
-    background-color: #111;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-container p {
-    font-size: 1rem;
-    color: #ccc;
-    line-height: 1.6;
-}
-
-body, html {
-    font-family: 'Poppins', sans-serif;
-}
-
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 20px;
-    }
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-    }
-    .hero-image img {
-        width: 250px;
-        margin: 20px auto;
-    }
-}
-
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 .fade-in {
     animation: fadeIn 0.8s ease-out;
 }
+
 
 #about, #skills, #experiences {
     animation: fadeIn 0.8s ease-out;
@@ -421,57 +405,6 @@ body, html {
     box-shadow: 0 8px 20px rgba(0, 247, 255, 0.7); /* Ombre plus marquée */
 }
 
-
-
-
-/* MY SKILLS SECTION */
-#skills {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-#skills h2 {
-    font-size: 2.5rem;
-    color: #00f7ff;
-    margin-bottom: 30px;
-}
-
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.skill {
-    width: 100%;
-}
-
-.skill h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #00f7ff;
-}
-
-.skill-bar {
-    background-color: #333;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
-}
-
-.skill-level {
-    height: 100%;
-    background-color: #00f7ff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 247, 255, 0.6);
-    transition: width 0.5s ease-in-out;
-    background: linear-gradient(to right, #00f7ff, #00ccff);
-}
 
 /* Footer */
 footer {
@@ -537,6 +470,9 @@ footer {
     color: #fff; /* Texte plus discret */
 }
 
+
+
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -550,6 +486,9 @@ footer {
     margin: 3px 0;
     transition: 0.4s;
 }
+
+
+
 
 @media screen and (max-width: 768px) {
     .hamburger {
@@ -577,16 +516,44 @@ footer {
 }
 
 
+/* Optionnel : responsive */
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column; /* Boutons empilés */
+        align-items: center; /* Centrage horizontal */
+    }
 
+    .btn {
+        width: 100%; /* Largeur pleine pour mobile */
+        text-align: center;
+    }
+}
 
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-image img {
+        width: 250px;
+        margin: 20px auto;
+    }
+}
 
-
-
-
-
-
-
-
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media (max-width: 768px) {
     .hero {
