@@ -206,12 +206,83 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #00f7ff;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #ddd;
+    margin: 10px 0;
+}
+
+/* Button in Card */
+.btn-card {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00f7ff;
+    color: #111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: #fff;
+    color: #00f7ff;
+}
+
 
 /* TIMELINE SECTION */
 section h2 {
     text-align: center;
     font-size: 36px;
-    margin-top: 30px;
+    margin-top: 65px;
+    
 }
 
 .timeline {
@@ -220,6 +291,7 @@ section h2 {
     align-items: center;
     gap: 20px;
     padding: 20px 50px;
+    margin-bottom: 20px;
 }
 
 .timeline-item {
@@ -262,6 +334,8 @@ section h2 {
 #contact{
     text-align: center;
     padding: 50px 20px;
+    
+    
 }
 
 #contact h1{
@@ -276,6 +350,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
 }
 
 .form-group{
@@ -351,12 +426,13 @@ h2{
 #skills {
     padding: 50px 20px;
     text-align: center;
+    margin-top: 2px;
 }
 
 #skills h2 {
     font-size: 2.5rem;
     color: #B42CCA;
-    margin-bottom: 30px;
+    margin-bottom: 1px;
 }
 
 .skills-container {
@@ -436,7 +512,7 @@ h2{
 
 /* Footer */
 footer {
-    background-color: #111; /* Couleur de fond sombre */
+    background-color: #000; /* Couleur de fond sombre */
     color: #fff; /* Texte blanc */
     padding: 40px 20px;
     text-align: center;
