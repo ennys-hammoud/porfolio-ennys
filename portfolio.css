@@ -274,7 +274,9 @@ nav ul li a:hover {
 .btn-card:hover {
     background-color: #fff;
     color: #00f7ff;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);  /* Éclat lumineux autour du bouton */
 }
+
 
 
 /* TIMELINE SECTION */
