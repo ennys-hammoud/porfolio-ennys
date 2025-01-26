@@ -25,19 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($to, $emailSubject, $emailBody, $headers)) {
         // Redirection après l'envoi réussi
         header("Location: index.php?status=success");
-        exit();
+        exit;
     } else {
         // Redirection en cas d'échec
-        header("Location: index.php?status=error");
-        exit();
+        header("Location: index.html?status=error");
+        exit;
     }
 }
-?>
 
-<?php if (isset($_GET['status'])): ?>
-    <?php if ($_GET['status'] == 'success'): ?>
-        <p style="color: green;">Your message has been sent successfully!</p>
-    <?php elseif ($_GET['status'] == 'error'): ?>
-        <p style="color: red;">There was an issue sending your message. Please try again.</p>
-    <?php endif; ?>
-<?php endif; ?>
+
+?>
