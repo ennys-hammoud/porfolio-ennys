@@ -222,27 +222,35 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <h2>CONTACT ME</h2> <!-- Titre de la section -->
-        <form>
+        <form action="index.php" method="POST">
             <!-- Formulaire de contact -->
             <div class="form-group">
-                <input type="text" name="full-name" placeholder="Full Name" required>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
             </div>
             <div class="form-group">
-                <input type="email" name="email" placeholder="Email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="form-group">
-                <input type="tel" name="phone-number" placeholder="Phone number" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-                <input type="text" name="subject" placeholder="Subject" required>  
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
             </div>
             <div class="form-group">
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="btn-submit">Send Message</button>
             </div>
+        </form>
     </section>
+
+    
 
     <!-- FOOTER -->
     <footer>
