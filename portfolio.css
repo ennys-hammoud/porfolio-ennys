@@ -170,6 +170,27 @@ nav ul li a:hover {
     transform: scale(1.1);  /* Effet de survol (agrandissement légèrement) */
 }
 
+/* Style pour le bouton de téléchargement */
+.download-cv {
+    margin-top: 20px;
+}
+
+.download-cv .btn.download {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    background-color:  #00f7ff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv .btn.download:hover {
+    background-color:  #00f7ff;
+}
 
 
 .hero-image img {
