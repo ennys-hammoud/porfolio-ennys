@@ -10,6 +10,7 @@
     <title>Portfolio - Ennys Hammoud</title> <!-- Titre de la page qui apparaît dans l'onglet du navigateur -->
     <link rel="stylesheet" href="portfolio.css"><!-- Lien vers le fichier CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Importation de la police Poppins -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -226,7 +227,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact">
         <h2>CONTACT ME</h2> <!-- Titre de la section -->
-        <form action="index.php" method="POST">
+        <form id="contact-form" action="index.php" method="POST">
             <!-- Formulaire de contact -->
             <div class="form-group">
                 <label for="name">Full Name:</label>
@@ -285,19 +286,6 @@
             <p>&copy; 2025 Ennys Hammoud | All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Reste du contenu de la page -->
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-
-        hamburger.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            console.log('Menu toggled'); // Pour le débogage
-        });
-    });
-</script>
+    <script src="index.js"></script> <!-- Ton fichier JS -->
 </body>
 </html>

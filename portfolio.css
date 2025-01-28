@@ -161,8 +161,9 @@ nav ul li a:hover {
 }
 
 .social-icon {
-    width: 30px;  /* Réduire la largeur des logos */
-    height: 30px; /* Réduire la hauteur des logos */
+    width: 60px;  /* Réduire la largeur des logos */
+    height: 60px; /* Réduire la hauteur des logos */
+    image-rendering: crisp-edges;  /* Pour éviter le flou lors du redimensionnement */
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -170,6 +171,8 @@ nav ul li a:hover {
 .social-icon:hover {
     transform: scale(1.1);  /* Effet de survol (agrandissement légèrement) */
 }
+
+
 
 /* Style pour le bouton de téléchargement */
 .download-cv {
@@ -180,7 +183,7 @@ nav ul li a:hover {
 
 .download-cv .btn.download {
     display: inline-block;
-    padding: 15px 216px;
+    padding: 17px 216px;
     font-size: 16px;
     color: #000;
     background-color: #00f7ff; /* Couleur de fond du bouton */
@@ -645,70 +648,226 @@ footer {
     }
 }
 
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 20px 30px;
+    }
 
-/* Optionnel : responsive */
+    nav ul {
+        margin-right: 30px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero h1, .hero h2 {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1, .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 15px;
+    }
+
+    .hero h1, .hero h2 {
+        font-size: 1.2em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* MEDIA QUERIES POUR LE RESPONSIVE DESIGN */
+
+/* Pour les petits écrans (tablettes, smartphones) */
 @media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero h1, .hero h2 {
+        text-align: center;
+    }
+
     .buttons {
-        flex-direction: column; /* Boutons empilés */
-        align-items: center; /* Centrage horizontal */
+        flex-direction: column;
+        align-items: center;
     }
 
     .btn {
-        width: 100%; /* Largeur pleine pour mobile */
-        text-align: center;
+        width: 80%;
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin-bottom: 10px;
     }
-}
 
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 20px;
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
     }
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
     }
+
+    .download-cv .btn.download {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+
     .hero-image img {
         width: 250px;
-        margin: 20px auto;
+        margin: 20px 0;
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
+/* Pour les très petits écrans (mobiles, moins de 480px) */
+@media (max-width: 480px) {
     .hero {
-        flex-direction: column;
+        padding: 15px;
+    }
+
+    .buttons {
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .download-cv .btn.download {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        margin: 15px 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    .about-container {
         padding: 20px;
     }
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
-    .hero-image img {
-        width: 250px;
-        margin: 20px auto;
+
+    .card {
+        width: 80%;
     }
 }
 
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@media (max-width: 480px) {
+    #about h2 {
+        font-size: 1.8rem;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .about-container {
+        padding: 15px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 150px;
     }
 }
