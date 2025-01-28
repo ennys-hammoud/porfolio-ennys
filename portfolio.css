@@ -156,6 +156,7 @@ nav ul li a:hover {
 .social-links {
     display: flex;
     gap: 20px;
+    margin-top: 30px;
     
 }
 
@@ -172,26 +173,30 @@ nav ul li a:hover {
 
 /* Style pour le bouton de téléchargement */
 .download-cv {
-    margin-top: 20px;
+    margin-top: 1px;
+    
 }
+
 
 .download-cv .btn.download {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 216px;
     font-size: 16px;
     color: #000;
-    background-color:  #00f7ff;
+    background-color: #00f7ff; /* Couleur de fond du bouton */
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
 }
 
 .download-cv .btn.download:hover {
-    background-color:  #00f7ff;
+    transform: translateY(-5px); /* Légère élévation */
+    background-color: #ffffff;  /* Couleur du fond en blanc au survol */
+    color: #000; /* Couleur du texte */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* Effet lumineux blanc autour du bouton */
 }
-
 
 .hero-image img {
     width: 400px;
