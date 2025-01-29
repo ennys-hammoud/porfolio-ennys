@@ -780,9 +780,12 @@ footer {
     }
 
     .download-cv .btn.download {
-        width: 100%;
-        padding: 15px;
-        font-size: 14px;
+        width: 80%;
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-image img {
@@ -816,9 +819,11 @@ footer {
     }
 
     .download-cv .btn.download {
-        width: 100%;
-        padding: 12px;
-        font-size: 14px;
+        width: 80%;
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        gap: 15px;
     }
 
     .hero-image img {

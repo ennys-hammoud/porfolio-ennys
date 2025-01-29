@@ -41,3 +41,13 @@ form.addEventListener("submit", function (event) {
             }, 5000);
         });
 });
+
+// Récupérer l'icône hamburger et le menu
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// Ajouter un événement de clic à l'icône hamburger
+hamburger.addEventListener('click', () => {
+    // Ajouter ou retirer la classe 'active' pour afficher/masquer le menu
+    navMenu.classList.toggle('active');
+});
