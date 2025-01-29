@@ -184,11 +184,11 @@ nav ul li a:hover {
 .download-cv .btn.download {
     display: inline-block;
     padding: 17px 216px;
-    font-size: 16px;
+    font-size: 1rem; /* Taille de la police */
     color: #000;
     background-color: #00f7ff; /* Couleur de fond du bouton */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
@@ -666,6 +666,7 @@ footer {
     .hero-content {
         max-width: 100%;
         text-align: center;
+        
     }
 
     .hero h1, .hero h2 {
@@ -771,12 +772,13 @@ footer {
 
     .social-links {
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 10%;
     }
 
     .social-icon {
         width: 50px;
         height: 50px;
+        margin-right: 7%;
     }
 
     .download-cv .btn.download {
@@ -789,8 +791,10 @@ footer {
     }
 
     .hero-image img {
-        width: 250px;
+        width: 400px;
         margin: 20px 0;
+        margin-top: 20%;
+        margin-left: 4%;
     }
 }
 
