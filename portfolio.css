@@ -881,7 +881,8 @@ footer {
     nav ul.nav-active {
         display: flex;
         width: 100%;
-        margin-top: -2%;    
+        margin-top: -2%;  
+
     }
 
     .nav-menu {
@@ -892,11 +893,12 @@ footer {
     
     }
 
+    .burger-menu {
+        display: block; /* Visible uniquement sur les écrans ≤ 768px */
+    }
+
+
 
 }
 
-
-    .burger-menu {
-        display: flex;
-    }
 
