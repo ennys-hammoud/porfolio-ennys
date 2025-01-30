@@ -298,6 +298,7 @@ nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
+    
 }
 
 .btn-card:hover {
@@ -604,25 +605,6 @@ footer {
 }
 
 
-
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: #00f7ff;
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-
-
-
 @media screen and (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -773,6 +755,7 @@ footer {
     .social-links {
         justify-content: center;
         margin-top: 10%;
+        
     }
 
     .social-icon {
@@ -815,6 +798,7 @@ footer {
 
     .social-links {
         gap: 15px;
+        
     }
 
     .social-icon {
@@ -878,5 +862,47 @@ footer {
 
     .card-image {
         height: 150px;
+    }
+}
+
+/* Style du menu burger */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Ajuste en fonction de ton header */
+    right: 20px; /* Le pousse complètement à droite */
+}
+
+
+.burger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #00f7ff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Navigation pour mobile */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul.nav-active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
     }
 }
