@@ -50,3 +50,40 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.classList.toggle("nav-active");
     });
 });
+
+const textElement = document.querySelector(".hero-content h2 span:last-child"); 
+const text = "web and mobile development student";
+let index = 0;
+let isDeleting = false;
+const speed = 100;  // Vitesse de frappe
+const eraseSpeed = 50;  // Vitesse d'effacement
+const delayBetweenLoops = 1500; // Pause avant de recommencer
+
+function typeWriterEffect() {
+    if (!isDeleting) {
+        // Affichage progressif
+        textElement.textContent = text.substring(0, index);
+        index++;
+
+        if (index > text.length) {
+            isDeleting = true;
+            setTimeout(typeWriterEffect, delayBetweenLoops); // Attente avant d'effacer
+            return;
+        }
+    } else {
+        // Effacement progressif
+        textElement.textContent = text.substring(0, index);
+        index--;
+
+        if (index === 0) {
+            isDeleting = false;
+        }
+    }
+    
+    setTimeout(typeWriterEffect, isDeleting ? eraseSpeed : speed);
+}
+
+// Lancer l'effet après le chargement de la page
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeWriterEffect, 500);
+});
