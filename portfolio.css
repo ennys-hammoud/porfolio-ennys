@@ -161,8 +161,8 @@ nav ul li a:hover {
 }
 
 .social-icon {
-    width: 60px;  /* Réduire la largeur des logos */
-    height: 60px; /* Réduire la hauteur des logos */
+    width: 30px;  /* Réduire la largeur des logos */
+    height: 30px; /* Réduire la hauteur des logos */
     image-rendering: crisp-edges;  /* Pour éviter le flou lors du redimensionnement */
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -170,6 +170,7 @@ nav ul li a:hover {
 
 .social-icon:hover {
     transform: scale(1.1);  /* Effet de survol (agrandissement légèrement) */
+    
 }
 
 
