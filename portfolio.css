@@ -224,9 +224,10 @@ nav ul li a:hover {
     background-color: #111;
     padding: 20px 40px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
+    box-shadow: 0 0 40px rgba(0, 247, 255, 0.6);
     max-width: 800px;
     margin: 0 auto;
+    
 }
 
 .about-container p {
@@ -235,12 +236,16 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+.about-container:hover {
+    filter: brightness(1.5); /* Augmente la luminosité de 30% */
+}
+
 /* Cards Container */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 20px;
 }
 
@@ -259,8 +264,9 @@ nav ul li a:hover {
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
+    filter: brightness(1.2) saturate(2.5); /* Augmente la luminosité et la saturation */
+    transform: scale(1.05); /* Effet de zoom léger */
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.8); /* Augmente l'ombre */
 }
 
 /* Card Image */
@@ -351,6 +357,7 @@ section h2 {
     width: 100%;
     max-width: 400px;
     box-shadow: 0 0 15px rgba(0, 247, 255, 0.6);
+    
 }
 
 
@@ -362,6 +369,10 @@ section h2 {
 .timeline-content p {
     font-size: 14px;
     color: #ccc;
+}
+
+.timeline-content:hover {
+    filter: brightness(1.2) saturate(4.5); /* Augmente la luminosité et la saturation */
 }
 
 
