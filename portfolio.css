@@ -161,8 +161,8 @@ nav ul li a:hover {
 }
 
 .social-icon {
-    width: 30px;  /* Réduire la largeur des logos */
-    height: 30px; /* Réduire la hauteur des logos */
+    width: 35px;  /* Réduire la largeur des logos */
+    height: 35px; /* Réduire la hauteur des logos */
     image-rendering: crisp-edges;  /* Pour éviter le flou lors du redimensionnement */
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -170,6 +170,7 @@ nav ul li a:hover {
 
 .social-icon:hover {
     transform: scale(1.1);  /* Effet de survol (agrandissement légèrement) */
+    
     
 }
 
@@ -207,6 +208,8 @@ nav ul li a:hover {
     border-radius: 50%;
     filter: brightness(0.8);
     margin-right: 90px;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* Effet lumineux blanc autour du bouton */
+    transform: scale(1.1);  /* Effet de survol (agrandissement légèrement) */
 }
 
 /* ABOUT ME SECTION */
@@ -436,6 +439,7 @@ form{
     text-transform: uppercase; /* Texte en majuscules */
     box-sizing: border-box; /* Gère bien le padding et la bordure */
     transition: background-color 0.3s ease; /* Animation pour un effet doux */
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* Effet lumineux blanc autour du bouton */
 }
 
 /* Effet au survol */
