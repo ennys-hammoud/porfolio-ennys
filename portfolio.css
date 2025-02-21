@@ -820,6 +820,15 @@ footer {
     .card-image {
         height: 200px;
     }
+    #toggleRain {
+        display: flex;
+        justify-content: left;
+        width: 8%; /* Largeur du bouton */
+        padding: 10px; /* Ajustez le padding si nécessaire */
+        font-size: 14px; /* Taille de police réduite pour les petits écrans */
+        left: 2%;
+        margin-top: 5%;
+    }
 }
 
 /* Style du menu burger */
@@ -876,7 +885,15 @@ footer {
     .burger-menu {
         display: block; /* Visible uniquement sur les écrans ≤ 768px */
     }
-
+    #toggleRain {
+        display: flex;
+        justify-content: left;
+        width: 8%; /* Largeur du bouton */
+        padding: 10px; /* Ajustez le padding si nécessaire */
+        font-size: 14px; /* Taille de police réduite pour les petits écrans */
+        left: 2%;
+        margin-top: 5%;
+    }
 
 
 }
@@ -947,6 +964,16 @@ footer {
         margin: 15px 0;
         margin-top: 50%;
     }
+    #toggleRain {
+        display: flex;
+        justify-content: left;
+        width: 8%; /* Largeur du bouton */
+        padding: 10px; /* Ajustez le padding si nécessaire */
+        font-size: 14px; /* Taille de police réduite pour les petits écrans */
+        left: 2%;
+        margin-top: 5%;
+    }
+    
 }
 
 #thunderCanvas {
