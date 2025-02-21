@@ -220,6 +220,8 @@ nav ul li a:hover {
 #about {
     padding: 50px 20px;
     text-align: center;
+    margin-top: 1px;
+    transform: translateY(-110px); /* Remonte la div de 20 pixels */
 }
 
 #about h2 {
@@ -246,6 +248,16 @@ nav ul li a:hover {
 
 .about-container:hover {
     filter: brightness(1.5); /* Augmente la luminosité de 30% */
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #B42CCA;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    
+
 }
 
 /* Cards Container */
@@ -326,11 +338,14 @@ nav ul li a:hover {
 
 
 /* TIMELINE SECTION */
-section h2 {
+#experiences h2 {
+    font-size: 2.5rem;
     text-align: center;
-    font-size: 36px;
-    margin-top: 65px;
-    
+    color: #B42CCA;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    transform: translateY(-13Opx); /* Remonte la div de 20 pixels */
+
 }
 
 .timeline {
@@ -383,18 +398,24 @@ section h2 {
     filter: brightness(1.2) saturate(4.5); /* Augmente la luminosité et la saturation */
 }
 
-
-#contact{
+#education h2 {
+    font-size: 2.5rem;
     text-align: center;
-    padding: 50px 20px;
-    
-    
+    color: #B42CCA;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    transform: translateY(-11Opx); /* Remonte la div de 20 pixels */
+
 }
 
-#contact h1{
+
+#mycontact h2{
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #00f7ff;
+    text-align: center;
+    color: #B42CCA;
+    margin-bottom: 1px;
+    margin-top: 2px;
+    transform: translateY(-11Opx); /* Remonte la div de 20 pixels */
 }
 
 form{
@@ -471,22 +492,22 @@ form{
     color: #00f7ff; /* Maintient la couleur */
     text-shadow: 0 0 15px #00f7ff; /* Effet lumineux autour de 'Ennys' */
 }
-h2{
-    color: #B42CCA;
-    text-shadow: 0 0 10px #B42CCA;
-}
+
 
 /* MY SKILLS SECTION */
 #skills {
     padding: 50px 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1px;
+    transform: translateY(-110px); /* Remonte la div de 20 pixels */
 }
 
 #skills h2 {
     font-size: 2.5rem;
     color: #B42CCA;
     margin-bottom: 1px;
+    margin-top: 2px;
+    transform: translateY(-11Opx); /* Remonte la div de 20 pixels */
 }
 
 .skills-container {
@@ -627,9 +648,6 @@ footer {
     font-size: 12px;
     color: #fff; /* Texte plus discret */
 }
-
-
-
 
 
 
