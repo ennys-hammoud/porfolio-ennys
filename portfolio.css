@@ -35,9 +35,8 @@ header {
     background-color: #000;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Changez à une valeur positive */
 }
-
 
 nav ul {
     
@@ -950,3 +949,56 @@ footer {
     }
 }
 
+#thunderCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; /* Mettez-le AU-DESSUS pour qu'on le voie */
+    pointer-events: none;
+    background: transparent; /* S'assurer qu'il ne bloque pas la vue */
+}
+
+.lightning {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: white;
+    box-shadow: 0 0 10px white;
+    opacity: 0;
+    animation: flash 0.2s ease-out;
+}
+
+@keyframes flash {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+
+
+
+#rainCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Changez à 0 pour qu'il soit derrière le contenu mais devant le fond */
+    pointer-events: none;
+    background: transparent;
+}
+
+#toggleRain {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}

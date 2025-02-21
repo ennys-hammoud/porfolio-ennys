@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="index.js" defer></script>
 </head>
-<body>
+<body> 
     <!-- HEADER -->
     <header>
         <div class="logo">Ennys <span>Hammoud</span></div>
@@ -29,10 +28,10 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#mycontact">Contact</a></li>
+                <button id="toggleRain">⛅ Arrêter la pluie</button>
             </ul>
         </nav>
     </header>
-
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
@@ -349,8 +348,11 @@
         <div class="footer-bottom">
             <!-- Texte de bas de page -->
             <p>&copy; 2025 Ennys Hammoud | All rights reserved.</p>
+            
         </div>
     </footer>
-    
+    <canvas id="thunderCanvas"></canvas>
+    <canvas id="rainCanvas"></canvas>
+    <script src="index.js" defer></script>
 </body>
 </html>

@@ -89,3 +89,165 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function thunderEffect() {
+    document.body.style.transition = "background-color 0.1s"; // Transition rapide
+    document.body.style.backgroundColor = "white"; // Éclair (flash blanc)
+
+    setTimeout(() => {
+        document.body.style.backgroundColor = ""; // Retour à la couleur normale
+    }, 200); // Retour rapide après 100ms (effet de flash)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+const canvas = document.getElementById("thunderCanvas");
+const ctx = canvas.getContext("2d");
+
+// Ajuster la taille du canvas
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+// Fonction pour le tonnerre (flash rapide)
+function thunderEffect() {
+    document.body.style.transition = "background-color 0.1s";
+    document.body.style.backgroundColor = "white";
+
+    setTimeout(() => {
+        document.body.style.backgroundColor = "";
+    }, 100);
+}
+
+// Fonction pour dessiner plusieurs éclairs
+function drawMultipleLightnings() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
+    for (let i = 0; i < Math.floor(Math.random() * 6) + 5; i++) { // 5 à 10 éclairs
+        drawLightning();
+    }
+
+    setTimeout(() => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, 200);
+}
+
+// Fonction pour dessiner un éclair unique
+function drawLightning() {
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.9)";
+    ctx.lineWidth = 3;
+
+    let startX = Math.random() * canvas.width;
+    let startY = 0;
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+
+    for (let i = 0; i < 10; i++) {
+        startX += (Math.random() - 0.5) * 100;
+        startY += Math.random() * 80;
+        ctx.lineTo(startX, startY);
+    }
+
+    ctx.stroke();
+}
+
+// Fonction pour alterner entre éclairs et tonnerre
+function triggerStorm() {
+    if (Math.random() > 0.5) {
+        // Soit un éclair
+        drawMultipleLightnings();
+    } else {
+        // Soit un flash de tonnerre
+        thunderEffect();
+    }
+}
+
+// Déclencher un événement aléatoire toutes les 3 à 6 secondes
+setInterval(triggerStorm, Math.random() * (6000 - 3000) + 3000);
+
+
+
+
+
+
+
+
+
+// Sélection du canvas pour la pluie
+const rainCanvas = document.getElementById("rainCanvas");
+const ctxRain = rainCanvas.getContext("2d");
+
+// Ajuster la taille du canvas
+function resizeRainCanvas() {
+    rainCanvas.width = window.innerWidth;
+    rainCanvas.height = window.innerHeight;
+}
+resizeRainCanvas();
+window.addEventListener("resize", resizeRainCanvas);
+
+// Création des gouttes de pluie
+const raindrops = [];
+const maxRaindrops = 100; // Nombre de gouttes
+
+for (let i = 0; i < maxRaindrops; i++) {
+    raindrops.push({
+        x: Math.random() * rainCanvas.width,
+        y: Math.random() * rainCanvas.height,
+        speed: Math.random() * 3 + 2, // Vitesse de chute
+        length: Math.random() * 15 + 10 // Longueur des gouttes
+    });
+}
+
+// Animation de la pluie
+let isRaining = true;
+drawRain(); // Démarre l'animation de la pluie
+function drawRain() {
+    if (!isRaining) return;
+
+    ctxRain.clearRect(0, 0, rainCanvas.width, rainCanvas.height);
+    ctxRain.strokeStyle = "rgba(173, 216, 230, 0.6)"; // Bleu clair
+    ctxRain.lineWidth = 2;
+
+    for (let drop of raindrops) {
+        ctxRain.beginPath();
+        ctxRain.moveTo(drop.x, drop.y);
+        ctxRain.lineTo(drop.x, drop.y + drop.length);
+        ctxRain.stroke();
+
+        drop.y += drop.speed;
+
+        // Remettre en haut quand elles atteignent le bas
+        if (drop.y > rainCanvas.height) {
+            drop.y = -drop.length;
+            drop.x = Math.random() * rainCanvas.width;
+        }
+    }
+
+    requestAnimationFrame(drawRain);
+}
+
+// Démarrer la pluie
+drawRain();
+
+// Bouton pour activer/désactiver la pluie
+document.getElementById("toggleRain").addEventListener("click", function () {
+    isRaining = !isRaining;
+    if (isRaining) {
+        drawRain();
+        this.textContent = "⛅ Arrêter la pluie";
+    } else {
+        ctxRain.clearRect(0, 0, rainCanvas.width, rainCanvas.height);
+        this.textContent = "🌧️ Relancer la pluie";
+    }
+});
