@@ -87,3 +87,5 @@ function typeWriterEffect() {
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriterEffect, 500);
 });
+
+

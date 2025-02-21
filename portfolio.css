@@ -12,6 +12,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 section {
     scroll-margin-top: 100px; /* Ajustez la valeur en fonction de la hauteur de votre header */
 }
@@ -629,6 +631,9 @@ footer {
 
 
 
+
+
+
 /* Media Queries */
 @media screen and (max-width: 1024px) {
     header {
@@ -872,6 +877,8 @@ footer {
     .logo {
         font-size: 18px;
     }
+
+    
 
     .hero {
         padding: 15px;
