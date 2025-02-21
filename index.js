@@ -245,9 +245,9 @@ document.getElementById("toggleRain").addEventListener("click", function () {
     isRaining = !isRaining;
     if (isRaining) {
         drawRain();
-        this.textContent = "⛅ Arrêter la pluie";
+        this.textContent = "⛅";
     } else {
         ctxRain.clearRect(0, 0, rainCanvas.width, rainCanvas.height);
-        this.textContent = "🌧️ Relancer la pluie";
+        this.textContent = "🌧️";
     }
 });
