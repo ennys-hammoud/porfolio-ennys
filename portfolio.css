@@ -72,6 +72,34 @@ nav ul li a:hover {
     text-shadow: 0 0 10px #00f7ff;
 }
 
+.marquee-container {
+    width: 100%;
+    background-color: #00f7ff;
+    color: #000;
+    line-height: 1; /* Ajuste la hauteur de ligne au minimum */
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center; /* Centre verticalement */
+    height: 24px; /* Ajuste la hauteur en fonction du texte */
+}
+
+.marquee-text {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 /* HERO SECTION */
 .hero {
