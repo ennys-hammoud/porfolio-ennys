@@ -21,7 +21,7 @@ section {
 section {
     margin: 100px 0; /* Ajoute un espace de 100px au-dessus et en dessous */
     padding: 20px; /* Ajoute de l'espace interne si nécessaire */
-    scroll-margin-top: 70px; /* Ajuste le défilement pour compenser un header fixe */
+    scroll-margin-top: 53px; /* Ajuste le défilement pour compenser un header fixe */
 }
 
 
@@ -82,7 +82,7 @@ nav ul li a:hover {
     white-space: nowrap;
     display: flex;
     align-items: center; /* Centre verticalement */
-    height: 24px; /* Ajuste la hauteur en fonction du texte */
+    height: 34px; /* Ajuste la hauteur en fonction du texte */
 }
 
 .marquee-text {
