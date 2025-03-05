@@ -204,7 +204,7 @@ for (let i = 0; i < maxRaindrops; i++) {
     raindrops.push({
         x: Math.random() * rainCanvas.width,
         y: Math.random() * rainCanvas.height,
-        speed: Math.random() * 3 + 2, // Vitesse de chute
+        speed: Math.random() * 5 + 7, // Vitesse de chute
         length: Math.random() * 15 + 10 // Longueur des gouttes
     });
 }
